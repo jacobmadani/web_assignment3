@@ -12,3 +12,13 @@ CREATE TABLE lists(
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
+CREATE TABLE tasks(
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    list_id INTEGER NOT NULL,
+    title VARCHAR(100) NOT NULL,
+    description TEXT,
+    status VARCHAR(20) DEFAULT 'pending' CHECK (status IN ('pending', 'done')),
+    due_date DATE,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (list_id) REFERENCES lists(id) ON DELETE CASCADE
+);
