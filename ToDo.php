@@ -8,6 +8,18 @@ function filterByStatus(array $tasks,string $status):array{
     }
     return $filteredTasks;
 }
+function groupByStatus(array $tasks):array{
+    $groupedTasks=[];
+    foreach($tasks as $task){
+        $status=$task['status'];
+        if(!isset($groupedTasks[$status])){
+            $groupedTasks[$status]=[];
+        }
+        $groupedTasks[$status][]= $task;
+    }
+    return $groupedTasks;
+}
+
 
 
 
