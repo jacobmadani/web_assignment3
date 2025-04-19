@@ -29,3 +29,7 @@ SELECT*FROM tasks WHERE list_id=1;
 UPDATE tasks SET status='done' WHERE id=3;
 DELETE FROM tasks WHERE id=1;
 SELECT*FROM tasks WHERE due_date<'2024-05-01';
+SELECT COUNT(t.id)AS done_tasks_count
+FROM tasks t
+JOIN lists l ON t.list_id=l.id
+WHERE l.user_id=1 AND t.status='done';
