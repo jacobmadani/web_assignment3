@@ -32,8 +32,3 @@ echo"\nTesting groupByStatus:\n";
 $groupedTasks=groupByStatus($tasks);
 print_r($groupedTasks);
 ?>
-
-
-
-
-?>
