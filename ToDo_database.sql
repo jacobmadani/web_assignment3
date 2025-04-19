@@ -25,3 +25,4 @@ CREATE TABLE tasks(
 INSERT INTO tasks (list_id,title,description,status,due_date)
 VALUES (1,'Buy groceries','Milk,eggs,bread','pending','2024-05-15');
 SELECT*FROM tasks WHERE status='pending';
+SELECT*FROM tasks WHERE list_id=1;
