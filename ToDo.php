@@ -28,6 +28,10 @@ $tasks = [
 echo"Testing filterByStatus:\n";
 $doneTasks=filterByStatus($tasks,"done");
 print_r($doneTasks);
+echo"\nTesting groupByStatus:\n";
+$groupedTasks=groupByStatus($tasks);
+print_r($groupedTasks);
+?>
 
 
 
