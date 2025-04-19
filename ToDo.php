@@ -25,7 +25,9 @@ $tasks = [
     ["id" => 3, "title" => "Go jogging", "status" => "pending", "due" => "2024-04-12"],
     ["id" => 4, "title" => "Book flight", "status" => "done", "due" => "2024-04-08"]
 ];
-
+echo"Testing filterByStatus:\n";
+$doneTasks=filterByStatus($tasks,"done");
+print_r($doneTasks);
 
 
 
