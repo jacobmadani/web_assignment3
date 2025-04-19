@@ -22,3 +22,5 @@ CREATE TABLE tasks(
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (list_id) REFERENCES lists(id) ON DELETE CASCADE
 );
+INSERT INTO tasks (list_id,title,description,status,due_date)
+VALUES (1,'Buy groceries','Milk,eggs,bread','pending','2024-05-15');
