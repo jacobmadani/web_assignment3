@@ -28,3 +28,4 @@ SELECT*FROM tasks WHERE status='pending';
 SELECT*FROM tasks WHERE list_id=1;
 UPDATE tasks SET status='done' WHERE id=3;
 DELETE FROM tasks WHERE id=1;
+SELECT*FROM tasks WHERE due_date<'2024-05-01';
