@@ -27,3 +27,4 @@ VALUES (1,'Buy groceries','Milk,eggs,bread','pending','2024-05-15');
 SELECT*FROM tasks WHERE status='pending';
 SELECT*FROM tasks WHERE list_id=1;
 UPDATE tasks SET status='done' WHERE id=3;
+DELETE FROM tasks WHERE id=1;
